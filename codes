@@ -1,1 +1,36 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("UnTold Hub V1", "DarkTheme")
 
+local Tab = Window:NewTab("Scripts")
+local Section = Tab:NewSection("R6 and Commands")
+Section:NewButton("Snake", "Become a snake, arms and legs are used for tail R6", function()
+    loadstring(game:HttpGet(('https://pastefy.ga/tWBTcE4R/raw'),true))()
+end)
+
+Section:NewButton("Infinite Yield", "Command", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+Section:NewButton("CHAOS SCRIPT", "R6 + GAME", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/1111-ssss/Chaos_Script/main/Chaos_script.txt'))()
+end)
+
+Section:NewButton("Reset", "Command", function()
+    game.Players.LocalPlayer.Character.Humanoid.Health = -100
+end)
+
+Section:NewButton("Simplity Gui", "All", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HeyGyt/simplityv2/main/main"))()
+end)
+
+Section:NewSlider("WalkSpeed", "All", 250, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewSlider("JumpPower", "All", 250, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.Jumppower = s
+end)
+
+Section:NewKeybind("ToggleUI", "Toggle Simplity Gui if you want too", Enum.KeyCode.H, function()
+	Library:ToggleUI()
+end)
